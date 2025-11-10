@@ -5,8 +5,18 @@
   </head>
   <body>
 	  <a-scene>
-      <a-sky color="blue"></a-sky>
-      
+		  <a-sky color="blue"></a-sky>
+		  <a-camera position="0 1.6 0"></a-camera>
+
+		  <!-- load assets -->
+		  <a-assets>
+			  <a-asset-item id="myAnimation" src="MorphScene.glb"></a-asset-item>
+		  </a-assets>
+
+		  <!-- display assets -->
+		  <a-entity gltf-model="#myAnimation" animation-mixer></a-entity>
+		  
+      </a-scene>
   </body>
 </html>
 
